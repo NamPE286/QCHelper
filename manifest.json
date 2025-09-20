@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "QCHelper",
+    "description": "",
+    "version": "1.0",
+    "action": {
+        "default_popup": "popup/index.html",
+        "default_icon": "static/icon.png"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "js": [
+                "scripts/grading.js"
+            ],
+            "matches": [
+                "https://asia.checker-soft.com/syca/c_v5-criticize.php*"
+            ]
+        }
+    ]
+}
