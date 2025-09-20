@@ -21,7 +21,13 @@ if (header == "Ngày đánh giá UB:" || header == "Ngày đánh giá RM:") {
             "radioAnswersTableInside"
         )) {
             if (elem.innerText.trim() == "10") {
-                elem.getElementsByClassName("SpepeateRadio")[0].click();
+                const radio = elem.getElementsByClassName("SpepeateRadio")[0];
+
+                if(radio.id == "obj8341039" || radio.id == "obj8340239") {
+                    continue;
+                }
+
+                radio.click();
             }
         }
 
